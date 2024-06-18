@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Greco",
+    "slug": "greco",
+    "scheme": "greco",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.greco.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": ".//assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.greco.app"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": true
+          },
+          "android": {
+            "newArchEnabled": true
+          }
+        }
+      ],
+      "expo-router",
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to access your Face ID biometric data."
+        }
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        // There is normally a ProjectID here but keeping it hidden for privacy purposes
+      }
+    },
+  }
+}
