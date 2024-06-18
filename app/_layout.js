@@ -1,30 +1,15 @@
-import React, { useState } from 'react';
-import { View, FlatList, RefreshControl } from 'react-native';
-
-const TestRefreshControl = () => {
-  const [refreshing, setRefreshing] = useState(false);
-
-  const onRefresh = () => {
-    setRefreshing(true);
-    setTimeout(() => setRefreshing(false), 2000);
-  };
-
+import { View, Text } from "react-native";
+import React from "react";
+import {Stack} from "expo-router"
+const _layout = () => {
   return (
-    <View style={{ flex: 1, paddingTop: 150 }}>
-      <FlatList
-        data={[{ key: '1' }, { key: '2' }, { key: '3' }]}
-        renderItem={({ item }) => <View style={{ height: 100, backgroundColor: 'lightgray', margin: 10 }} />}
-        refreshControl={
-          <RefreshControl
-            refreshing={refreshing}
-            onRefresh={onRefresh}
-            tintColor="blue"  // Change the tintColor here
-            progressViewOffset={50}
-          />
-        }
-      />
-    </View>
+    <Stack screenOptions={{
+      headerShown:false
+    }}>
+            <Stack.Screen name="index"/>
+      <Stack.Screen name="page1"/>
+    </Stack>
   );
 };
 
-export default TestRefreshControl;
+export default _layout;

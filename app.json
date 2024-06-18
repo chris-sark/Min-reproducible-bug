@@ -47,8 +47,15 @@
     ],
     "extra": {
       "eas": {
-        // There is normally a ProjectID here but keeping it hidden for privacy purposes
+        "projectId": "d0bcdc6b-2959-48e2-b530-c4bd2cbe8f29"
       }
     },
+    "owner": "greco-app",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/d0bcdc6b-2959-48e2-b530-c4bd2cbe8f29"
+    }
   }
 }
