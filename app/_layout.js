@@ -18,7 +18,7 @@ const TestRefreshControl = () => {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            tintColor="blue"  // Change the tintColor here
+            tintColor="blue"
             progressViewOffset={50}
           />
         }
